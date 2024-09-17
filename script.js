@@ -1,6 +1,6 @@
 console.log("Welcome to Spotify");
 
-// Initialize the Variables
+// Initialize the Variable
 let songIndex = 0;
 let audioElement = new Audio('songs/1.mp3');
 let masterPlay = document.getElementById('masterPlay');
@@ -9,6 +9,8 @@ let gif = document.getElementById('gif');
 let masterSongName = document.getElementById('masterSongName');
 let songItems = Array.from(document.getElementsByClassName('songItem'));
 
+
+//Upload the song
 let songs = [
     {songName: "Aaj Ki Raat", filePath: "songs/1.mp3", coverPath: "covers/1.jpg"},
     {songName: "Agar Tum Sath Ho", filePath: "songs/2.mp3", coverPath: "covers/2.jpg"},
@@ -43,6 +45,8 @@ masterPlay.addEventListener('click', ()=>{
         gif.style.opacity = 0;
     }
 })
+
+
 // Listen to Events
 audioElement.addEventListener('timeupdate', ()=>{ 
     // Update Seekbar
